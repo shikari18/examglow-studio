@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 
 import { SiteNav } from "@/components/site-nav";
@@ -121,9 +121,12 @@ function Hero() {
         </h1>
 
         <div className="mt-10 flex justify-center">
-          <button className="rounded-full bg-ink px-12 py-5 text-xl font-medium text-ink-foreground transition-transform hover:-translate-y-0.5">
+          <Link
+            to="/signup"
+            className="rounded-full bg-ink px-12 py-5 text-xl font-medium text-ink-foreground transition-transform hover:-translate-y-0.5"
+          >
             Try for free
-          </button>
+          </Link>
         </div>
 
         <div className="mt-4 grid grid-cols-2 items-end gap-6">
@@ -136,7 +139,7 @@ function Hero() {
           />
           <img
             src={heroDoodle}
-            alt="Doodle of a student studying on a laptop with their dog"
+            alt="Doodle of a student studying on a laptop with their cat"
             width={1200}
             height={912}
             className="w-full max-w-md justify-self-end"
@@ -282,9 +285,12 @@ function Features() {
               </h3>
               <p className="mt-5 max-w-sm leading-relaxed text-ink/70">{tab.body}</p>
               <div className="mt-auto flex flex-wrap gap-3 pt-10">
-                <button className="rounded-full bg-ink px-8 py-4 font-medium text-ink-foreground transition-transform hover:-translate-y-0.5">
+                <Link
+                  to="/signup"
+                  className="rounded-full bg-ink px-8 py-4 font-medium text-ink-foreground transition-transform hover:-translate-y-0.5"
+                >
                   Get started
-                </button>
+                </Link>
                 <button className="rounded-full border border-ink/30 px-8 py-4 font-medium transition-colors hover:bg-ink/5">
                   Learn more
                 </button>
@@ -381,9 +387,12 @@ function ClosingCta() {
         <p className="mt-6 text-lg text-muted-foreground">
           Drop your class materials, we'll make your study plan.
         </p>
-        <button className="mt-10 rounded-full bg-ink px-12 py-5 text-xl font-medium text-ink-foreground transition-transform hover:-translate-y-0.5">
+        <Link
+          to="/signup"
+          className="mt-10 inline-block rounded-full bg-ink px-12 py-5 text-xl font-medium text-ink-foreground transition-transform hover:-translate-y-0.5"
+        >
           Start for free
-        </button>
+        </Link>
         <p className="mt-14 text-sm text-muted-foreground">
           Trusted by students from top institutions
         </p>
