@@ -239,8 +239,8 @@ function VideoSection() {
 }
 
 function Features() {
-  const [active, setActive] = useState(tabs[0].id);
-  const tab = tabs.find((t) => t.id === active) ?? tabs[0];
+  const [active, setActive] = useState(tabs[0]!.id);
+  const tab = tabs.find((t) => t.id === active) ?? tabs[0]!;
 
   return (
     <section className="px-5 py-20 lg:px-10 lg:py-28">
